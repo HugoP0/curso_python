@@ -5,7 +5,6 @@ while saldo!= "":
                   (APERTE ENTER SEM ADICIONAR VALOR PARA SOMAR O SALDO)\n
                   Entre com o saldo:
                   """)
-
     if saldo != "":
             saldo_total += float(saldo)
 

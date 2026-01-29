@@ -1,6 +1,5 @@
-# %%
-#For é apropiado para percorrer um objeto
-#Quais numeros divisiveis por 4 no intervalo [4-100]
+#O While é adequado para comparacoes logicas e que o laco seja repetido com base em uma condicao logica
+#Quais numeros divisiveis por X no intervalo [Y]
 
 count = 4
 
@@ -10,4 +9,3 @@ while count <= 100:
         print(count)
     
     count += 1
-# %%
