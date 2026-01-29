@@ -21,3 +21,8 @@ Além do nosso youtube, se ligue no nosso site e agenda para ficar por dentro de
 # Dia 3 
 
 - Aprendendo a estrutura de laços de repetição, com o uso do for e while.
+
+# Dia 4
+
+- Listas
+- Funções de minimo, maximo, media e soma e tamanho de lista
