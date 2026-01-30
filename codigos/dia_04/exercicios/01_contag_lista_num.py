@@ -10,8 +10,6 @@ print(lista)
 
 numero = int(input ("Entre com um numero para descobrir a quantidade na lista: "))
 
-cont = 0
-
 for i in lista:
     if i == numero:
         cont+= 1
