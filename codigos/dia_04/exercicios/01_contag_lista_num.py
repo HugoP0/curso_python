@@ -1,6 +1,14 @@
-lista = [1,2,2,3,3,2,1,1,1,1,1,5,6,7,7,6,5]
+lista = []
+numero=0
 
-numero = int(input ("Entre com um numero: "))
+while numero!= "":    
+    numero = input("Digite um numero para adicionar a lista: ")
+    if numero != "":
+            lista.append(int(numero))
+
+print(lista)
+
+numero = int(input ("Entre com um numero para descobrir a quantidade na lista: "))
 
 cont = 0
 
