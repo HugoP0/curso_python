@@ -22,6 +22,7 @@ Além do nosso youtube, se ligue no nosso site e agenda para ficar por dentro de
 
 # Dia 3 
 [Codigos dia 03](https://github.com/HugoP0/curso_python/tree/develop/codigos/dia_03)
+
 - Laços de repetição, com o uso do for e while.
 
 # Dia 4
@@ -35,3 +36,9 @@ Além do nosso youtube, se ligue no nosso site e agenda para ficar por dentro de
 
 - Definição de dicionarios, acessando, manipulando as chaves e valores
 - Definição de tuplas e suas singularidades
+
+# Dia 6
+[Codigos dia 06](https://github.com/HugoP0/curso_python/tree/develop/codigos/dia_06)
+
+- Definição de funções
+- Uso de args e kwargs
