@@ -10,7 +10,7 @@ Além do nosso youtube, se ligue no nosso site e agenda para ficar por dentro de
 [Codigos dia 01](https://github.com/HugoP0/curso_python/tree/develop/codigos/dia_01)
 
 - Inicio do projeto python. 
-- Operaçoes matemáticas, variáveis e o famoso ola mundo !
+- Operaçoes matemáticas, variáveis e o famoso ola mundo
 
 # Dia 2
 [Codigos dia 02](https://github.com/HugoP0/curso_python/tree/develop/codigos/dia_02)
@@ -23,7 +23,7 @@ Além do nosso youtube, se ligue no nosso site e agenda para ficar por dentro de
 # Dia 3 
 [Codigos dia 03](https://github.com/HugoP0/curso_python/tree/develop/codigos/dia_03)
 
-- Laços de repetição, com o uso do for e while.
+- Laços de repetição, com o uso do for e while
 
 # Dia 4
 [Codigos dia 04](https://github.com/HugoP0/curso_python/tree/develop/codigos/dia_04)
@@ -42,3 +42,10 @@ Além do nosso youtube, se ligue no nosso site e agenda para ficar por dentro de
 
 - Definição de funções
 - Uso de args e kwargs
+- Importando bibliotecas e modulos
+
+# Dia 7
+[Codigos dia 06](https://github.com/HugoP0/curso_python/tree/develop/codigos/dia_07)
+
+- Lidando com arquivos, escrevendo, sobrescrevendo e adicionando texto
+- Manipulando listas de arquivos csv, adicionando a um dicionario
