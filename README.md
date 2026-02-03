@@ -49,3 +49,10 @@ Além do nosso youtube, se ligue no nosso site e agenda para ficar por dentro de
 
 - Lidando com arquivos, escrevendo, sobrescrevendo e adicionando texto
 - Manipulando listas de arquivos csv, adicionando a um dicionario
+
+
+# Dia 8
+[Codigos dia 08](https://github.com/HugoP0/curso_python/tree/develop/codigos/dia_08)
+
+- Uso de API 
+- Breve apresentacao em pandas
