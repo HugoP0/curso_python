@@ -56,3 +56,9 @@ Além do nosso youtube, se ligue no nosso site e agenda para ficar por dentro de
 
 - Uso de API 
 - Breve apresentacao em pandas
+
+# Dia 9
+[Codigos dia 09](https://github.com/HugoP0/curso_python/tree/develop/codigos/dia_09)
+
+- List Comprehension
+- Unpack
