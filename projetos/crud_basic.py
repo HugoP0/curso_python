@@ -69,6 +69,14 @@ def delete_user(id):
     db.commit()
     db.close()
 
+def alter_table():
+    db = sqlite3.connect('crud.db')
+    cursor = db.cursor()
+    cursor.execute('''ALTER TABLE users ADD COLUMN balance''')
+    db.commit()
+    db.close()
+
+
 def menu():
     print('''
     1. Adicionar usuário
@@ -77,22 +85,23 @@ def menu():
     4. Deletar usuário
     5. Sair''')
 
-# Criar a tabela
-
-create_table()
+# Criar a e atualizar a tabela com um campo novo
+ 
+#create_table()
+#alter_table()
 
 while True:
     menu()
     escolha = input("Escolha uma opção: ")
 
     if escolha == '1':
-        nome = input("Digite o nome do usuário: ")
-        idade = input("Digite a idade do usuário: ")
+        name = input("Digite o nome do usuário: ")
+        age = input("Digite a idade do usuário: ")
         balance = input("Digite o saldo na conta: ")
 
         try:
-            int(idade)
-            add_user(nome, idade, balance)
+            int(age)
+            add_user(name, age, balance)
             print("Usuário adicionado com sucesso!")
         except ValueError:
             print("Digite uma idade válida")
@@ -106,25 +115,25 @@ while True:
         list_users()
 
         alteracao = input('''
-        1. Alterar a idade
+        1. Alterar a age
         2. Alterar o nome
         3. Alterar o saldo
         Digite a opcao desejada:''')
         
         if alteracao == '1':
             id = int(input("Digite o ID do usuário a ser atualizado: "))
-            idade = int(input("Digite a nova idade do usuário: "))
-            update_user_age(id,idade)
+            age = int(input("Digite a nova idade do usuário: "))
+            update_user_age(id,age)
 
         elif alteracao == '2':
             id = int(input("Digite o ID do usuário a ser atualizado: "))
-            nome = input("Digite o novo nome do usuário: ")
-            update_user_name(id,nome)
+            name = input("Digite o novo nome do usuário: ")
+            update_user_name(id,name)
             print("Usuário atualizado com sucesso!")
 
         elif alteracao == '3':
             id = int(input("Digite o ID do usuário a ser atualizado: "))
-            balance = float(input("Digite o valor a ser atualizado"))
+            balance = float(input("Digite o valor a ser atualizado: "))
             update_user_balance(id,balance)
 
     elif escolha == '4':
