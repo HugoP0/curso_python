@@ -107,42 +107,54 @@ while True:
             print("Digite uma idade válida")
 
     elif escolha == '2':
-        print("\nListando todos os usuários:")
+        print("\nListando todos os usuários:\n")
         list_users()
 
     elif escolha == '3':
-        print("\nLista de usuários:")
+        print("\nLista de usuários que podem ser alterados:\n")
         list_users()
 
         alteracao = input('''
-        1. Alterar a age
-        2. Alterar o nome
-        3. Alterar o saldo
-        Digite a opcao desejada:''')
+Selecione o que deseja alterar\n
+1. Alterar a idade
+2. Alterar o nome
+3. Alterar o saldo\n
+Digite a opcao desejada:''')
         
         if alteracao == '1':
-            id = int(input("Digite o ID do usuário a ser atualizado: "))
-            age = int(input("Digite a nova idade do usuário: "))
-            update_user_age(id,age)
+            try:
+                id = int(input("Digite o ID do usuário a ser atualizado: "))
+                age = int(input("Digite a nova idade do usuário: "))
+                update_user_age(id,age)
+            except ValueError:
+                print("Entrada inválida, tente novamente")
 
         elif alteracao == '2':
-            id = int(input("Digite o ID do usuário a ser atualizado: "))
-            name = input("Digite o novo nome do usuário: ")
-            update_user_name(id,name)
-            print("Usuário atualizado com sucesso!")
+            try:
+                id = int(input("Digite o ID do usuário a ser atualizado: "))
+                name = input("Digite o novo nome do usuário: ")
+                update_user_name(id,name)
+                print("Usuário atualizado com sucesso!")
+            except ValueError:
+                print("Entrada inválida, tente novamente")
 
         elif alteracao == '3':
-            id = int(input("Digite o ID do usuário a ser atualizado: "))
-            balance = float(input("Digite o valor a ser atualizado: "))
-            update_user_balance(id,balance)
+            try:
+                id = int(input("Digite o ID do usuário a ser atualizado: "))
+                balance = float(input("Digite o valor a ser atualizado: "))
+                update_user_balance(id,balance)
+            except ValueError:
+                print("Entrada inválida, tente novamente")
 
     elif escolha == '4':
+        print("\nLista de usuários que podem ser deletados:\n")
+        list_users()
         try:
             id = int(input("Digite o ID do usuário a ser deletado: "))
             delete_user(id)
             print("Usuário deletado com sucesso!")
         except ValueError as error:
-            print(error)
+            print("Entrada inválida, tente novamente")
 
     elif escolha == '5':
         print("Saindo do programa...")
