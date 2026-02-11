@@ -88,10 +88,11 @@ while True:
     if escolha == '1':
         nome = input("Digite o nome do usuário: ")
         idade = input("Digite a idade do usuário: ")
+        balance = input("Digite o saldo na conta: ")
 
         try:
             int(idade)
-            add_user(nome, idade)
+            add_user(nome, idade, balance)
             print("Usuário adicionado com sucesso!")
         except ValueError:
             print("Digite uma idade válida")
