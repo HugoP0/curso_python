@@ -142,6 +142,7 @@ Digite a opcao desejada:''')
                 id = int(input("Digite o ID do usuário a ser atualizado: "))
                 balance = float(input("Digite o valor a ser atualizado: "))
                 update_user_balance(id,balance)
+                print(f"Saldo {balance} atualizado com sucesso!")
             except ValueError:
                 print("Valor inválido, utilize somente o teclado numérico")
 
