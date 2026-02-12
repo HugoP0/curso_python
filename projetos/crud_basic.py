@@ -79,11 +79,11 @@ def alter_table():
 
 def menu():
     print('''
-    1. Adicionar usuário
-    2. Listar usuários
-    3. Atualizar usuário
-    4. Deletar usuário
-    5. Sair''')
+1. Adicionar usuário
+2. Listar usuários
+3. Atualizar usuário
+4. Deletar usuário
+5. Sair''')
 
 # Criar a e atualizar a tabela com um campo novo
  
@@ -100,11 +100,10 @@ while True:
         balance = input("Digite o saldo na conta: ")
 
         try:
-            int(age)
-            add_user(name, age, balance)
-            print("Usuário adicionado com sucesso!")
+            add_user(name, int(age), float(balance))
+            print(f"Usuário {name} adicionado com sucesso!")
         except ValueError:
-            print("Digite uma idade válida")
+            print("Valor invalido. Use somente o teclado numérico")
 
     elif escolha == '2':
         print("\nListando todos os usuários:\n")
@@ -127,16 +126,16 @@ Digite a opcao desejada:''')
                 age = int(input("Digite a nova idade do usuário: "))
                 update_user_age(id,age)
             except ValueError:
-                print("Entrada inválida, tente novamente")
+                print("Valor inválido, utilize somente o teclado numérico")
 
         elif alteracao == '2':
             try:
                 id = int(input("Digite o ID do usuário a ser atualizado: "))
                 name = input("Digite o novo nome do usuário: ")
                 update_user_name(id,name)
-                print("Usuário atualizado com sucesso!")
+                print(f"Usuário {name} atualizado com sucesso!")
             except ValueError:
-                print("Entrada inválida, tente novamente")
+                print("Valor inválido, utilize somente o teclado numérico")
 
         elif alteracao == '3':
             try:
@@ -144,7 +143,7 @@ Digite a opcao desejada:''')
                 balance = float(input("Digite o valor a ser atualizado: "))
                 update_user_balance(id,balance)
             except ValueError:
-                print("Entrada inválida, tente novamente")
+                print("Valor inválido, utilize somente o teclado numérico")
 
     elif escolha == '4':
         print("\nLista de usuários que podem ser deletados:\n")
@@ -153,8 +152,8 @@ Digite a opcao desejada:''')
             id = int(input("Digite o ID do usuário a ser deletado: "))
             delete_user(id)
             print("Usuário deletado com sucesso!")
-        except ValueError as error:
-            print("Entrada inválida, tente novamente")
+        except ValueError:
+            print("Valor inválido, utilize somente o teclado numérico")
 
     elif escolha == '5':
         print("Saindo do programa...")
