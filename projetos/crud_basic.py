@@ -1,5 +1,4 @@
 import sqlite3
-
 #Função para criar a tabela de usuários
 def create_table():
     db = sqlite3.connect('crud.db')
@@ -33,6 +32,7 @@ def list_users():
 
     db.close()
 # Atualizando um usuario
+
 def update_user_name(id,name):
     db = sqlite3.connect('crud.db')
     cursor = db.cursor()
@@ -55,11 +55,16 @@ def update_user_balance(id,balance):
     db = sqlite3.connect('crud.db')
     cursor = db.cursor()
 
-    cursor.execute('''UPDATE users SET balance = ? WHERE id = ?''',(balance,id))
+    cursor.execute('''SELECT * FROM users WHERE id = ? ''',(id,))
+    user = cursor.fetchall()
+    print(type(user))
+    print(user)
+        
+    print("Atualizando saldo\n")
+    cursor.execute('''UPDATE users SET balance = balance + ? WHERE id = ?''',(balance,id))
 
     db.commit()
     db.close()
-
 
 # Deletando um usuario
 def delete_user(id):
@@ -84,11 +89,6 @@ def menu():
 3. Atualizar usuário
 4. Deletar usuário
 5. Sair''')
-
-# Criar a e atualizar a tabela com um campo novo
- 
-#create_table()
-#alter_table()
 
 while True:
     menu()
@@ -142,7 +142,7 @@ Digite a opcao desejada:''')
                 id = int(input("Digite o ID do usuário a ser atualizado: "))
                 balance = float(input("Digite o valor a ser atualizado: "))
                 update_user_balance(id,balance)
-                print(f"Saldo {balance} atualizado com sucesso!")
+                print(f"Saldo {balance} atualizado !")
             except ValueError:
                 print("Valor inválido, utilize somente o teclado numérico")
 
@@ -162,3 +162,5 @@ Digite a opcao desejada:''')
     else:
         print("Opção inválida. Por favor, escolha uma opção válida.")
 
+
+# %%
